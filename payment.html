@@ -1,0 +1,121 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right, #e0f7ff, #b3e5fc);
+background-image:url("pay.avif"); 
+    background-size:cover; 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-position:center;
+}
+
+.payment-box{
+    width:350px;
+    background-color:white;
+    border:2px solid black;
+    border-radius:10px;
+    padding:25px;
+    margin:auto;
+    margin-top:40px;
+    box-shadow:0px 0px 15px gray;
+}
+
+h1{
+    text-shadow:2px 2px 5px gray;
+}
+
+h2{
+    color:#333;
+}
+
+input[type="text"],
+input[type="password"]{
+    width:90%;
+    padding:8px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+input[type="submit"]{
+    background-color:black;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{
+    background-color:red;
+}
+
+a{
+    text-decoration:none;
+    color:blue;
+    font-weight:bold;
+}
+
+a:hover{
+    color:red;
+}
+
+input[type="radio"]{
+    margin-left:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+<h1>NIKE FOOTBALL STORE</h1>
+
+<div class="payment-box">
+
+<h2>Payment Details</h2>
+
+<form>
+
+Card Holder Name:<br><br>
+<input type="text"><br><br>
+
+Card Number:<br><br>
+<input type="text"><br><br>
+
+Expiry Date:<br><br>
+<input type="text" placeholder="MM/YY"><br><br>
+
+CVV:<br><br>
+<input type="password"><br><br>
+
+Payment Method:<br><br>
+
+<input type="radio" name="pay"> Credit Card
+<input type="radio" name="pay"> Debit Card
+<input type="radio" name="pay"> UPI
+
+<br><br>
+
+<input type="submit" value="Pay Now">
+
+</form>
+
+<br>
+
+<a href="cart.html">Back to Cart</a>
+
+</div>
+
+</center>
+
+</body>
+</html>
+
