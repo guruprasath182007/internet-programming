@@ -1,0 +1,352 @@
+Ex:4 job seeker registration:
+Register.html:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Seeker Registration Form</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background-image:url("register.avif");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+.container{
+width:70%;
+margin:auto;
+margin-top:40px;
+margin-bottom:40px;
+padding:35px;
+background-color:rgba(255,255,255,0.95);
+border-radius:12px;
+box-shadow:0px 0px 20px gray;
+}
+h2{
+text-align:center;
+color:#003366;
+margin-bottom:30px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+background-color:white;
+}
+td{
+padding:15px;
+border:1px solid #d9d9d9;
+}
+td:first-child{
+width:28%;
+font-weight:bold;
+}
+input,select,textarea{
+width:100%;
+padding:12px;
+box-sizing:border-box;
+border:1px solid #b5b5b5;
+border-radius:6px;
+font-size:15px;
+}
+textarea{
+resize:none;
+}
+button{
+padding:13px 35px;
+font-size:17px;
+background-color:#0059b3;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+button:hover{
+background-color:#003d7a;
+}
+.required{
+color:red;
+}
+.error{
+color:red;
+font-size:14px;
+display:block;
+padding-top:5px;
+}
+.invalid{
+border:2px solid red !important;
+}
+</style>
+<script>
+function validateForm()
+{
+let valid=true;
+let name=document.getElementById("name");
+let email=document.getElementById("email");
+let phone=document.getElementById("phone");
+let dob=document.getElementById("dob");
+let gender=document.getElementById("gender");
+let qualification=document.getElementById("qualification");
+let skills=document.getElementById("skills");
+let job=document.getElementById("job");
+let resume=document.getElementById("resume");
+let emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+let phonePattern=/^[0-9]{10}$/;
+let namePattern=/^[A-Za-z ]+$/;
+document.querySelectorAll(".error").forEach(function(item)
+{
+item.innerHTML="";
+});
+document.querySelectorAll("input,select,textarea").forEach(function(item)
+{
+item.classList.remove("invalid");
+});
+if(name.value=="")
+{
+document.getElementById("nameError").innerHTML=
+"Please enter your full name.";
+name.classList.add("invalid");
+valid=false;
+}
+else if(!name.value.match(namePattern))
+{
+document.getElementById("nameError").innerHTML=
+"Please enter a valid name.";
+name.classList.add("invalid");
+valid=false;
+}
+if(email.value=="")
+{
+document.getElementById("emailError").innerHTML=
+"Please enter your email address.";
+email.classList.add("invalid");
+valid=false;
+}
+else if(!email.value.match(emailPattern))
+{
+document.getElementById("emailError").innerHTML=
+"Please enter a valid email address.";
+email.classList.add("invalid");
+valid=false;
+}
+if(phone.value=="")
+{
+document.getElementById("phoneError").innerHTML=
+"Please enter your phone number.";
+phone.classList.add("invalid");
+valid=false;
+}
+else if(!phone.value.match(phonePattern))
+{
+document.getElementById("phoneError").innerHTML=
+"Please enter a valid 10 digit phone number.";
+phone.classList.add("invalid");
+valid=false;
+}
+if(dob.value=="")
+{
+document.getElementById("dobError").innerHTML=
+"Please select your date of birth.";
+dob.classList.add("invalid");
+valid=false;
+}
+if(gender.value=="")
+{
+document.getElementById("genderError").innerHTML=
+"Please select your gender.";
+gender.classList.add("invalid");
+valid=false;
+}
+if(qualification.value=="")
+{
+document.getElementById("qualificationError").innerHTML=
+"Please enter your qualification.";
+qualification.classList.add("invalid");
+valid=false;
+}
+if(skills.value=="")
+{
+document.getElementById("skillsError").innerHTML=
+"Please enter your skills.";
+skills.classList.add("invalid");
+valid=false;
+}
+if(job.value=="")
+{
+document.getElementById("jobError").innerHTML=
+"Please enter your preferred job role.";
+job.classList.add("invalid");
+valid=false;
+}
+if(resume.value=="")
+{
+document.getElementById("resumeError").innerHTML=
+"Please upload your resume.";
+resume.classList.add("invalid");
+valid=false;
+}
+else
+{
+let fileType=resume.value.split(".").pop().toLowerCase();
+if(fileType!="pdf" &&
+fileType!="doc" &&
+fileType!="docx")
+{
+document.getElementById("resumeError").innerHTML=
+"Resume must be in PDF, DOC or DOCX format.";
+resume.classList.add("invalid");
+valid=false;
+}
+}
+if(valid)
+{
+alert("Registration Successful!");
+document.getElementById("registrationForm").reset();
+document.querySelectorAll(".error").forEach(function(item)
+{
+item.innerHTML="";
+});
+document.querySelectorAll("input,select,textarea").forEach(function(item)
+{
+item.classList.remove("invalid");
+});
+}
+return false;
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h2>JOB SEEKER REGISTRATION FORM</h2>
+<form id="registrationForm"
+onsubmit="return validateForm()">
+<table>
+<tr>
+<td>
+Full Name <span class="required">*</span>
+</td>
+<td>
+<input type="text"
+id="name"
+placeholder="Enter your full name">
+<span class="error"
+id="nameError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Email Address <span class="required">*</span>
+</td>
+<td>
+<input type="text"
+id="email"
+placeholder="Enter your email address">
+<span class="error"
+id="emailError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Phone Number <span class="required">*</span>
+</td>
+<td>
+<input type="text"
+id="phone"
+placeholder="Enter your 10 digit phone number">
+<span class="error"
+id="phoneError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Date of Birth <span class="required">*</span>
+</td>
+<td>
+<input type="date"
+id="dob">
+<span class="error"
+id="dobError"></span>
+</td>
+</tr><tr>
+<td>
+Gender <span class="required">*</span>
+</td>
+<td>
+<select id="gender">
+<option value="">
+Select Gender
+</option>
+<option>
+Male
+</option>
+<option>
+Female
+</option>
+<option>
+Other
+</option>
+</select>
+<span class="error"
+id="genderError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Highest Qualification <span class="required">*</span>
+</td>
+<td>
+<input type="text"
+id="qualification"
+placeholder="Enter your qualification">
+<span class="error"
+id="qualificationError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Skills <span class="required">*</span>
+</td>
+<td>
+<textarea rows="4"
+id="skills"
+placeholder="Enter your skills"></textarea>
+<span class="error"
+id="skillsError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Preferred Job Role <span class="required">*</span>
+</td>
+<td>
+<input type="text"
+id="job"
+placeholder="Enter your preferred job role">
+<span class="error"
+id="jobError"></span>
+</td>
+</tr>
+<tr>
+<td>
+Upload Resume <span class="required">*</span>
+</td>
+<td>
+<input type="file"
+id="resume">
+<span class="error"
+id="resumeError"></span>
+</td>
+</tr>
+</table>
+<br>
+<center>
+<button type="submit">
+Submit
+</button>
+</center>
+</form>
+</div>
+</body>
+</html>
