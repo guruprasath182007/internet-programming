@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NIKE FOOTBALL STORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+<img src="logo.png" width="100" height="100">
+<h1>
+<marquee>⚽ NIKE FOOTBALL STORE ⚽</marquee>
+</h1>
+<a href="index.html">Home</a> |
+<a href="login.html">Login</a> |
+<a href="register.html">Register</a> |
+<a href="cart.html">Cart</a> |
+<a href="payment.html">Payment</a>
+</center>
+<hr>
+<center>
+<img src="banner.jfif" width="1000" height="350">
+</center>
+<hr>
+<center>
+<h2>Featured Products</h2>
+</center>
+<table align="center">
+<tr>
+<th>Product</th>
+<th>Description</th>
+<th>Price</th>
+<th>Action</th>
+</tr>
+<tr>
+<td><img src="mercurial.jfif" width="120" height="120"></td>
+<td>
+Nike Mercurial Elite<br>
+Lightweight Football Boots
+</td>
+<td>₹12,999</td>
+<td>
+<a href="cart.html">
+<input type="button" value="Add To Cart">
+</a>
+</td>
+</tr>
+<tr>
+<td><img src="phantom.jfif" width="120" height="120"></td>
+<td>
+Nike Phantom GX<br>
+Professional Football Boots
+</td>
+<td>₹14,499</td>
+<td>
+<a href="cart.html">
+<input type="button" value="Add To Cart">
+</a>
+</td>
+</tr>
+<tr>
+<td><img src="academy.jfif" width="120" height="120"></td>
+<td>
+Nike Academy Ball<br>
+Official Training Ball
+</td>
+<td>₹1,499</td>
+<td>
+<a href="cart.html">
+<input type="button" value="Add To Cart">
+</a>
+</td>
+</tr>
+</table>
+<br>
+<center>
+<h2>Latest Nike Advertisement</h2>
+<video width="600" controls>
+<source src="nike.mp4" type="video/mp4">
+</video>
+</center>
+<hr>
+<center>
+<h2>Why Choose Nike?</h2>
+<ol style="display:inline-block; text-align:left;">
+<li>Premium Quality Products</li>
+<li>Fast Delivery</li>
+<li>Easy Returns</li>
+<li>24/7 Customer Support</li>
+</ol>
+</center>
+<hr>
+<center>
+<p>© 2027 Nike Football Store</p>
+</center>
+</body>
+</html>
+
+
+
+Login.html:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right, #e0f7ff, #b3e5fc);
+    background-image:url("bg.jfif"); 
+    background-size:cover; 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-position:center;
+}
+.login-box{
+    width:300px;
+    background-color:rgba(255,255,255,0.9);
+    border:2px solid black;
+    border-radius:10px;
+    padding:25px;
+    margin-top:80px;
+    box-shadow:0px 0px 15px gray;
+}
+h1{
+    color:black;
+    text-shadow:2px 2px 5px gray;
+}
+h2{
+    color:#333;
+}
+input[type="text"],
+input[type="password"]{
+    width:90%;
+    padding:8px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+input[type="submit"]{
+    background-color:black;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+input[type="submit"]:hover{
+    background-color:red;
+}
+
+a{
+    text-decoration:none;
+    color:blue;
+    font-weight:bold;
+}
+a:hover{
+    color:red;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>NIKE FOOTBALL STORE</h1>
+<div class="login-box">
+<h2>User Login</h2>
+<form>
+Username:<br><br>
+<input type="text"><br><br>
+Password:<br><br>
+<input type="password"><br><br>
+<input type="submit" value="Login">
+</form>
+<br>
+New User?
+<a href="register.html">Register Here</a>
+<br><br>
+<a href="index.html">Back to Home</a>
+</div>
+</center>
+</body>
+</html>
+
+Register.html:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right, #e0f7ff, #b3e5fc);
+    background-image:url("bgg.jfif"); 
+    background-size:cover; 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-position:center;
+}
+
+.register-box{
+    width:350px;
+    background-color:rgba(255,255,255,0.9);
+    border:2px solid black;
+    border-radius:10px;
+    padding:25px;
+    margin-top:40px;
+    box-shadow:0px 0px 15px gray;
+}
+h1{
+    color:black;
+    text-shadow:2px 2px 5px gray;
+}
+h2{
+    color:#333;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width:90%;
+    padding:8px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+input[type="submit"]{
+    background-color:black;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+input[type="submit"]:hover{
+    background-color:red;
+}
+a{
+    text-decoration:none;
+    color:blue;
+    font-weight:bold;
+}
+a:hover{
+    color:red;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>NIKE FOOTBALL STORE</h1>
+<div class="register-box">
+<h2>New User Registration</h2>
+<form>
+Full Name:<br><br>
+<input type="text"><br><br>
+Email:<br><br>
+<input type="email"><br><br>
+Username:<br><br>
+<input type="text"><br><br>
+Password:<br><br>
+<input type="password"><br><br>
+Confirm Password:<br><br>
+<input type="password"><br><br>
+<input type="submit" value="Register">
+</form>
+<br>
+<a href="login.html">Already have an account?</a>
+</div>
+</center>
+</body>
+</html>
+
+
+
+Cart.html:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shopping Cart</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right, #e0f7ff, #b3e5fc);
+    background-image:url("cart1.jfif"); 
+    background-size:cover; 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-position:center;
+}
+h1{
+    text-shadow:2px 2px 5px gray;
+}
+a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    padding:5px;
+}
+a:hover{
+    color:red;
+}
+table{
+    border-collapse:collapse;
+    background-color:white;
+    box-shadow:0px 0px 10px gray;
+    border:2px solid black;
+}
+th{
+    background-color:#d6eaf8;
+}
+th,td{
+    padding:10px;
+    border:1px solid gray;
+}
+img{
+    border-radius:10px;
+}
+input[type="button"]{
+    background-color:black;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+input[type="button"]:hover{
+    background-color:red;
+}
+h3{
+    color:#0d47a1;
+}
+ol{
+    background-color:rgba(255,255,255,0.8);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px lightgray;
+}
+p{
+    color:#555;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+<center>
+<img src="logo.png" width="100" height="100">
+<h1>NIKE FOOTBALL STORE</h1>
+<a href="index.html">Home</a> |
+<a href="login.html">Login</a> |
+<a href="register.html">Register</a> |
+<a href="cart.html">Cart</a> |
+<a href="payment.html">Payment</a>
+</center>
+<hr>
+<center>
+<h2>Your Shopping Cart</h2>
+<table cellpadding="10">
+<tr>
+<th>Product</th>
+<th>Quantity</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>Nike Mercurial Elite</td>
+<td>1</td>
+<td>₹12,999</td>
+</tr>
+<tr>
+<td>Nike Phantom GX</td>
+<td>1</td>
+<td>₹14,499</td>
+</tr>
+<tr>
+<td>Nike Academy Ball</td>
+<td>1</td>
+<td>₹1,499</td>
+</tr>
+</table>
+<br>
+<h3>Total Amount : ₹28,997</h3>
+<a href="payment.html">
+<input type="button" value="Proceed To Payment">
+</a>
+<br><br>
+<a href="index.html">Continue Shopping</a>
+</center>
+<hr>
+<center>
+<h2>Order Summary</h2>
+<ol style="display:inline-block; text-align:left;">
+<li>Review your selected products.</li>
+<li>Verify the total amount.</li>
+<li>Proceed to the payment page.</li>
+<li>Complete your purchase.</li>
+</ol>
+</center>
+<hr>
+<center>
+<p>© 2027 Nike Football Store</p>
+</center>
+</body>
+</html>
+
+Payment.html:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment</title>
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right, #e0f7ff, #b3e5fc);
+background-image:url("pay.avif"); 
+    background-size:cover; 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-position:center;
+}
+.payment-box{
+    width:350px;
+    background-color:white;
+    border:2px solid black;
+    border-radius:10px;
+    padding:25px;
+    margin:auto;
+    margin-top:40px;
+    box-shadow:0px 0px 15px gray;
+}
+h1{
+    text-shadow:2px 2px 5px gray;
+}
+h2{
+    color:#333;
+}
+input[type="text"],
+input[type="password"]{
+    width:90%;
+    padding:8px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+input[type="submit"]{
+    background-color:black;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+input[type="submit"]:hover{
+    background-color:red;
+}
+a{
+    text-decoration:none;
+    color:blue;
+    font-weight:bold;
+}
+a:hover{
+    color:red;
+}
+input[type="radio"]{
+    margin-left:10px;
+}
+</style>
+</head>
+<body>
+<center>
+<h1>NIKE FOOTBALL STORE</h1>
+<div class="payment-box">
+<h2>Payment Details</h2>
+<form>
+Card Holder Name:<br><br>
+<input type="text"><br><br>
+Card Number:<br><br>
+<input type="text"><br><br>
+Expiry Date:<br><br>
+<input type="text" placeholder="MM/YY"><br><br>
+CVV:<br><br>
+<input type="password"><br><br>
+Payment Method:<br><br>
+<input type="radio" name="pay"> Credit Card
+<input type="radio" name="pay"> Debit Card
+<input type="radio" name="pay"> UPI
+<br><br>
+<input type="submit" value="Pay Now">
+</form>
+<br>
+<a href="cart.html">Back to Cart</a>
+</div>
+</center>
+</body>
+</html>
+
+Style.css:
+body{
+    font-family:Arial,Georgia-seriff;
+    background:linear-gradient(to right, #f8f9fa, #e3f2fd);
+    background-image:url("nike-bg.avif"); 
+    background-size:cover; 
+    background-repeat:no-repeat; 
+    background-attachment:fixed; 
+    background-position:center;
+}
+h1{
+    color:black;
+    text-shadow:2px 2px 5px gray;
+}
+h2{
+    color:#333333;
+}
+a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    padding:8px;
+}
+a:hover{
+    color:red;
+}
+table{
+    border-collapse:collapse;
+    border:2px solid black;
+    background-color:white;
+    box-shadow:0px 0px 10px lightgray;
+}
+th{
+    background-color:#d6eaf8;
+}
+th,td{
+    padding:11px;
+    border:1px solid gray;
+}
+img{
+    border-radius:10px;
+    box-shadow:0px 0px 8px gray;
+}
+input[type="button"]{
+    background-color:black;
+    color:white;
+    border:none;
+    border-radius:5px;
+    padding:8px 12px;
+    cursor:pointer;
+}
+input[type="button"]:hover{
+    background-color:red;
+}
+video{
+    border:3px solid black;
+    border-radius:10px;
+    box-shadow:0px 0px 10px gray;
+}
+hr{
+    border:1px solid lightgray;
+}
+p{
+    font-weight:bold;
+    color:#555555;
+}
