@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Shopping - Order Viewer</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        .container {
+            width: 88%;
+            margin: 45px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #6b4226;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .button-area {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #6b4226;
+            color: white;
+            border: none;
+            padding: 11px 24px;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #51321e;
+        }
+
+        h2 {
+            color: #6b4226;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #6b4226;
+            color: white;
+            padding: 13px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px 13px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #faf6f0;
+        }
+
+        tr:hover {
+            background-color: #eee2d3;
+        }
+
+        .price {
+            color: #4d7c59;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+
+    <script>
+        function loadOrders() {
+
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var xml = this.responseXML;
+                    var orders = xml.getElementsByTagName("order");
+
+                    var output = "<h2>Order Details</h2>";
+
+                    output += "<table>";
+
+                    output += "<tr>";
+                    output += "<th>ID</th>";
+                    output += "<th>Customer</th>";
+                    output += "<th>Product</th>";
+                    output += "<th>Quantity</th>";
+                    output += "<th>Price</th>";
+                    output += "</tr>";
+
+                    for (var i = 0; i < orders.length; i++) {
+
+                        var o = orders[i];
+
+                        function val(tag) {
+                            return o.getElementsByTagName(tag)[0]
+                                .childNodes[0].nodeValue;
+                        }
+
+                        var id = val("id");
+                        var customer = val("customer");
+                        var product = val("product");
+                        var quantity = val("quantity");
+                        var price = val("price");
+
+                        output += "<tr>";
+
+                        output += "<td>" + id + "</td>";
+                        output += "<td>" + customer + "</td>";
+                        output += "<td>" + product + "</td>";
+                        output += "<td>" + quantity + "</td>";
+                        output += "<td class='price'>$" + price + "</td>";
+
+                        output += "</tr>";
+                    }
+
+                    output += "</table>";
+
+                    document.getElementById("orderData").innerHTML = output;
+                }
+            };
+
+            xhttp.open("GET", "orders.xml", true);
+            xhttp.send();
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Online Shopping - Order Viewer</h1>
+
+    <p class="description">
+        View customer orders loaded from XML using AJAX
+    </p>
+
+    <div class="button-area">
+        <button onclick="loadOrders()">Load Orders</button>
+    </div>
+
+    <div id="orderData"></div>
+
+    <div class="footer">
+        Order information loaded asynchronously from orders.xml
+    </div>
+
+</div>
+
+</body>
+
+</html>
