@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef2f5;
+            padding: 30px;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #263238;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #37474f;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cfd8dc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #607d8b;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .row .form-group {
+            flex: 1;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            background-color: #37474f;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #263237;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>User Registration</h1>
+    <div class="subtitle">
+        Enter your personal and professional details
+    </div>
+    <form action="validate.php" method="post">
+        <!-- Username and Password -->
+        <div class="row">
+            <div class="form-group">
+                <label>
+                    User Name <span class="required">*</span>
+                </label>
+                <input type="text"
+                       name="username"
+                       placeholder="Enter username"
+                       required>
+            </div>
+            <div class="form-group">
+                <label>
+                    Password <span class="required">*</span>
+                </label>
+                <input type="password"
+                       name="password"
+                       placeholder="Enter password"
+                       required>
+            </div>
+        </div>
+        <!-- Full Name -->
+        <div class="form-group">
+            <label>
+                Full Name <span class="required">*</span>
+            </label>
+            <input type="text"
+                   name="name"
+                   placeholder="Enter your full name"
+                   required>
+        </div>
+        <!-- DOB and Gender -->
+        <div class="row">
+            <div class="form-group">
+                <label>
+                    Date of Birth <span class="required">*</span>
+                </label>
+                <input type="date"
+                       name="dob"
+                       required>
+            </div>
+            <div class="form-group">
+                <label>
+                    Gender <span class="required">*</span>
+                </label>
+                <select name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div> 
+        </div>
+        <!-- Qualification -->
+        <div class="form-group">
+            <label>
+                Highest Qualification <span class="required">*</span>
+            </label>
+            <input type="text"
+                   name="qualification"
+                   placeholder="Example: B.E Computer Science"
+                   required>
+        </div>
+        <!-- Skills -->
+        <div class="form-group">
+            <label>
+                Skills <span class="required">*</span>
+            </label>
+            <textarea name="skills"
+                      rows="4"
+                      placeholder="Example: Java, HTML, CSS, Python"
+                      required></textarea>
+        </div>
+        <!-- Job Role -->
+        <div class="form-group">
+            <label>
+                Preferred Job Role <span class="required">*</span>
+            </label>
+            <input type="text"
+                   name="job"
+                   placeholder="Example: Software Developer"
+                   required>
+        </div>
+        <!-- Credit Card -->
+        <div class="form-group">
+            <label>
+                Credit Card Number <span class="required">*</span>
+            </label>
+            <input type="text"
+                   name="ccnumber"
+                   placeholder="Enter 13 to 19 digit card number"
+                   pattern="[0-9]{13,19}"
+                   maxlength="19"
+                   required>
+        </div>
+        <!-- Email and Phone -->
+        <div class="row">
+            <div class="form-group">
+                <label>
+                    Email <span class="required">*</span>
+                </label>
+                <input type="email"
+                       name="email"
+                       placeholder="example@gmail.com"
+                       required>
+            </div>
+            <div class="form-group">
+                <label>
+                    Phone Number <span class="required">*</span>
+                </label>
+                <input type="tel"
+                       name="phone"
+                       placeholder="10 digit number"
+                       pattern="[0-9]{10}"
+                       required>
+            </div>
+        </div>
+        <input type="submit"
+               value="Register User"
+               class="submit-btn">
+    </form>
+    <div class="footer">
+        Please enter all required details correctly
+    </div>
+</div>
+</body>
+</html>
+
