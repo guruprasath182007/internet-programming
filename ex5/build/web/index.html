@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Quiz</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .quiz {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+        }
+
+        h2 {
+            margin: 0 0 25px;
+            text-align: center;
+            color: #4b3f72;
+        }
+
+        .q {
+            margin-bottom: 20px;
+            padding: 18px;
+            background: #f5f3ff;
+            border-radius: 10px;
+            border: 1px solid #ddd7ff;
+            color: #222;
+            font-weight: 600;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 11px 14px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #ebe8ff;
+            border-color: #6c5ce7;
+        }
+
+        .option input {
+            width: 17px;
+            height: 17px;
+            margin: 0;
+            accent-color: #6c5ce7;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            height: 42px;
+            margin-top: 12px;
+            padding: 10px 12px;
+            border: 2px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #6c5ce7;
+        }
+
+        button {
+            width: 100%;
+            height: 45px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 7px;
+            background: #6c5ce7;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5546c7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="quiz">
+
+    <h2>HTML5 Quiz</h2>
+
+    <form action="ExamServlet" method="post">
+
+        <div class="q">
+            1. What does HTML stand for?
+
+            <label class="option">
+                <input type="radio" name="q1"
+                       value="HyperText Markup Language">
+                <span>HyperText Markup Language</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1"
+                       value="HighText Machine Language">
+                <span>HighText Machine Language</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1"
+                       value="Home Tool Markup Language">
+                <span>Home Tool Markup Language</span>
+            </label>
+        </div>
+
+        <div class="q">
+            2. Which tag is the largest heading?
+
+            <label class="option">
+                <input type="radio" name="q2" value="h1">
+                <span>h1</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="h6">
+                <span>h6</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="head">
+                <span>head</span>
+            </label>
+        </div>
+
+        <div class="q">
+            3. Which language styles HTML?
+
+            <label class="option">
+                <input type="radio" name="q3" value="HTML">
+                <span>HTML</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="CSS">
+                <span>CSS</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="JavaScript">
+                <span>JavaScript</span>
+            </label>
+        </div>
+
+        <div class="q">
+            4. Which language adds interactivity?
+
+            <label class="option">
+                <input type="radio" name="q4" value="CSS">
+                <span>CSS</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="Java">
+                <span>Java</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="JavaScript">
+                <span>JavaScript</span>
+            </label>
+        </div>
+
+        <div class="q">
+            5. Which tag creates a hyperlink?
+
+            <label class="option">
+                <input type="radio" name="q5" value="a">
+                <span>a</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="link">
+                <span>link</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="href">
+                <span>href</span>
+            </label>
+        </div>
+
+        <div class="q">
+            6. Which attribute gives an image URL?
+
+            <label class="option">
+                <input type="radio" name="q6" value="src">
+                <span>src</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q6" value="href">
+                <span>href</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q6" value="url">
+                <span>url</span>
+            </label>
+        </div>
+
+        <div class="q">
+            7. HTML5 declaration starts with?
+
+            <input type="text"
+                   name="q7"
+                   placeholder="Enter one word answer">
+        </div>
+
+        <div class="q">
+            8. Which element draws graphics?
+
+            <input type="text"
+                   name="q8"
+                   placeholder="Enter one word answer">
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

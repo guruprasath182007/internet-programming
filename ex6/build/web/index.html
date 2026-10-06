@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Ticket Booking System</title>
+</head>
+
+<body>
+
+<h1 align="center">Bus Details</h1>
+
+<center>
+    <p><b>Choose your bus here and book your tickets. Have a Good Journey...</b></p>
+</center>
+
+<table border="3" align="center">
+
+<tr>
+    <th>Number</th>
+    <th>Bus</th>
+    <th>Boarding Point</th>
+    <th>Destination</th>
+    <th>Timing</th>
+    <th>Ticket Price</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>White Bus</td>
+    <td>Bernabaeu</td>
+    <td>Camp nou</td>
+    <td>10.am</td>
+    <td>1000</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Blue Bus</td>
+    <td>Old Trafford</td>
+    <td>Liverpool city</td>
+    <td>9.pm</td>
+    <td>1500</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<center>
+
+<form action="BusServlet" method="post">
+
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <br><br>
+
+    <label>Age:</label>
+    <input type="text" name="age" required>
+
+    <br><br>
+
+    <label>Select Bus No:</label>
+    <input type="text" name="busno" required>
+
+    <br><br>
+
+    <label>Seat No:</label>
+    <input type="text" name="seatno" required>
+
+    <br><br>
+
+    <label>Price:</label>
+    <input type="text" name="price" required>
+
+    <br><br>
+
+    <input type="submit" value="Book Ticket">
+
+</form>
+
+</center>
+
+</body>
+</html>
